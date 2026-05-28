@@ -6,7 +6,6 @@ import Navigation from "../components/Navigation/Navigation";
 import Subscription from "../components/Subscription/Subscription";
 import Footer from "../components/Footer/Footer";
 import searchBusinesses from "../util/yelp";
-import './homePage.css';
 
 export default function HomePage() {
     const [businesses, setBusinesses] = useState([]);
