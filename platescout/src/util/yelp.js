@@ -1,5 +1,7 @@
 // src/util/yelp.js
 
+import { apiUrl } from "./api";
+
 const SEARCH_PATH = "/api/yelp/businesses/search";
 
 async function searchBusinesses(term, location, sortBy) {
@@ -12,7 +14,7 @@ async function searchBusinesses(term, location, sortBy) {
   });
 
   // Send a fetch request to the Yelp backend search endpoint
-  const res = await fetch(`${SEARCH_PATH}?${params}`);
+  const res = await fetch(`${apiUrl(SEARCH_PATH)}?${params}`);
   // Check if the response failed and throw an error if needed
   if (!res.ok) {
     throw new Error(`Yelp request failed (${res.status})`);

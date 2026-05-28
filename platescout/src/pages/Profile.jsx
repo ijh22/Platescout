@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import { apiUrl } from "../util/api";
 
 // Assignment 7 — Profile route.
 // Reads the logged-in user from localStorage and renders their info.
@@ -34,7 +35,7 @@ function Profile() {
   //   - This is what makes Logout a real "I'm done" — not just clearing the browser.
   const handleLogout = async () => {
     try {
-      const response = await fetch("/api/logout", {
+      const response = await fetch(apiUrl("/api/logout"), {
         method: "POST",
         headers: { "Authorization": `Bearer ${localStorage.getItem("token")}` },
       });

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import "./Forms.css";
+import { apiUrl } from "../util/api";
 
 // Assignment 7 — Signup route.
 // Same shape as A6. The only thing new is that we now save TWO things to
@@ -39,7 +40,7 @@ function SignupForm() {
     }
 
     try {
-      const response = await fetch("/api/register", {
+      const response = await fetch(apiUrl("/api/register"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, email, password }),

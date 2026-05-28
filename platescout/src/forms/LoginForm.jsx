@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import "./Forms.css";
+import { apiUrl } from "../util/api";
 
 // Assignment 7 — Login route.
 // Same shape as A6, but the "already logged in?" check now looks at
@@ -38,7 +39,7 @@ function LoginForm() {
     }
 
     try {
-      const response = await fetch("/api/login", {
+      const response = await fetch(apiUrl("/api/login"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
