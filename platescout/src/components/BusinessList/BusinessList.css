@@ -1,0 +1,6 @@
+.BuisnessList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 50px;
+  margin: 100px 10%;
+}
