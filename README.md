@@ -1,6 +1,6 @@
 ## Live URLs
 
-- **Client:** https://platescout-h4nq-oktw0tas2-isaiah-s-projects8.vercel.app/
+- **Client:** https://platescout-h4nq.vercel.app/
 - **Server:** https://platescout-ijh22.onrender.com/
 - **Server health check:** https://platescout-ijh22.onrender.com/api/health
 
